@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تحليل أمان الإطار الفولاذي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>تحليل أمان الإطار الفولاذي</h1>
+    <form id="frameForm">
+
+        <!-- اختيار نوع مقطع الرافتـر -->
+        <fieldset>
+            <legend>نوع مقطع الرافتـر</legend>
+            <select id="rafter_type">
+                <option value="builtup">Built-Up</option>
+                <option value="box">علبة</option>
+                <option value="pipe">ماسورة</option>
+            </select>
+        </fieldset>
+
+        <div id="rafter_fields"></div>
+
+        <!-- اختيار نوع مقطع العمود -->
+        <fieldset>
+            <legend>نوع مقطع العمود</legend>
+            <select id="column_type">
+                <option value="builtup">Built-Up</option>
+                <option value="box">علبة</option>
+                <option value="pipe">ماسورة</option>
+            </select>
+        </fieldset>
+
+        <div id="column_fields"></div>
+
+        <!-- عمود وسط -->
+        <fieldset>
+            <legend>هل يوجد عمود وسط؟</legend>
+            <select id="has_middle_column">
+                <option value="no">لا</option>
+                <option value="yes">نعم</option>
+            </select>
+        </fieldset>
+
+        <div id="middle_column_fields" style="display:none;"></div>
+
+        <!-- بيانات عامة -->
+        <fieldset>
+            <legend>بيانات عامة</legend>
+            <label>ارتفاع العمود H (م): <input type="number" id="H" required></label>
+            <label>أقصى ارتفاع H_total (م): <input type="number" id="H_total" required></label>
+            <label>السبان span (م): <input type="number" id="span" required></label>
+            <label>المسافة بين الإطارات spacing (م): <input type="number" id="spacing" required></label>
+            <label>الحمل على السقف (كجم/م²): <input type="number" id="load_area" required></label>
+            <label>fy (MPa): <input type="number" id="fy" value="355" required></label>
+            <label>معامل الأمان FS:
+                <select id="FS">
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                </select>
+            </label>
+            <label>معامل الانبعاج K:
+                <select id="K">
+                    <option value="0.5">مثبت من الطرفين</option>
+                    <option value="1">مثبت من طرف واحد</option>
+                    <option value="2">حر الطرفين</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <button type="submit">تحليل</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
