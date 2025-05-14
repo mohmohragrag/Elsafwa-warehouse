@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <title>تحليل أمان الإطار الفولاذي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>تحليل أمان الإطار الفولاذي</h1>
+  <form id="frameForm">
+    <!-- رافتـر أيسر -->
+    <fieldset>
+      <legend>اختيار نوع المقطع للرافتـر الأيسر</legend>
+      <label>
+        <select id="rafter_type_r1">
+          <option value="builtup">Built-Up</option>
+          <option value="box">علبة</option>
+          <option value="pipe">ماسورة</option>
+        </select>
+      </label>
+
+      <!-- Built-Up Fields -->
+      <div id="rafter_r1_builtup_fields">
+        <label>bf_r1: <input type="number" id="bf_r1" required></label>
+        <label>tf_r1: <input type="number" id="tf_r1" required></label>
+        <label>tw_r1: <input type="number" id="tw_r1" required></label>
+        <label>hw_r1: <input type="number" id="hw_r1" required></label>
+      </div>
+
+      <!-- Box Fields -->
+      <div id="rafter_r1_box_fields" style="display: none;">
+        <label>الطول: <input type="number" id="length_r1" required></label>
+        <label>العرض: <input type="number" id="width_r1" required></label>
+        <label>السمك: <input type="number" id="thickness_r1" required></label>
+      </div>
+
+      <!-- Pipe Fields -->
+      <div id="rafter_r1_pipe_fields" style="display: none;">
+        <label>القطر الخارجي: <input type="number" id="diameter_r1" required></label>
+        <label>السمك: <input type="number" id="thickness_r1_pipe" required></label>
+      </div>
+    </fieldset>
+
+    <!-- تكرار الحقول للرافتـر الأيمن -->
+    <fieldset>
+      <legend>اختيار نوع المقطع للرافتـر الأيمن</legend>
+      <label>
+        <select id="rafter_type_r2">
+          <option value="builtup">Built-Up</option>
+          <option value="box">علبة</option>
+          <option value="pipe">ماسورة</option>
+        </select>
+      </label>
+      <div id="rafter_r2_builtup_fields">
+        <label>bf_r2: <input type="number" id="bf_r2" required></label>
+        <label>tf_r2: <input type="number" id="tf_r2" required></label>
+        <label>tw_r2: <input type="number" id="tw_r2" required></label>
+        <label>hw_r2: <input type="number" id="hw_r2" required></label>
+      </div>
+      <div id="rafter_r2_box_fields" style="display: none;">
+        <label>الطول: <input type="number" id="length_r2" required></label>
+        <label>العرض: <input type="number" id="width_r2" required></label>
+        <label>السمك: <input type="number" id="thickness_r2" required></label>
+      </div>
+      <div id="rafter_r2_pipe_fields" style="display: none;">
+        <label>القطر الخارجي: <input type="number" id="diameter_r2" required></label>
+        <label>السمك: <input type="number" id="thickness_r2_pipe" required></label>
+      </div>
+    </fieldset>
+
+    <!-- الأعمدة -->
+    <!-- أبعاد العمود الأيسر -->
+    <fieldset>
+      <legend>اختيار نوع المقطع للعمود الأيسر</legend>
+      <label>
+        <select id="column_type_c1">
+          <option value="builtup">Built-Up</option>
+          <option value="box">علبة</option>
+          <option value="pipe">ماسورة</option>
+        </select>
+      </label>
+
+      <!-- Built-Up Fields -->
+      <div id="column_c1_builtup_fields">
+        <label>bf_c1: <input type="number" id="bf_c1" required></label>
+        <label>tf_c1: <input type="number" id="tf_c1" required></label>
+        <label>tw_c1: <input type="number" id="tw_c1" required></label>
+        <label>hw_c1: <input type="number" id="hw_c1" required></label>
+      </div>
+
+      <!-- Box Fields -->
+      <div id="column_c1_box_fields" style="display: none;">
+        <label>الطول: <input type="number" id="length_c1" required></label>
+        <label>العرض: <input type="number" id="width_c1" required></label>
+        <label>السمك: <input type="number" id="thickness_c1" required></label>
+      </div>
+
+      <!-- Pipe Fields -->
+      <div id="column_c1_pipe_fields" style="display: none;">
+        <label>القطر الخارجي: <input type="number" id="diameter_c1" required></label>
+        <label>السمك: <input type="number" id="thickness_c1_pipe" required></label>
+      </div>
+    </fieldset>
+
+    <!-- العمود الأيمن -->
+    <fieldset>
+      <legend>اختيار نوع المقطع للعمود الأيمن</legend>
+      <label>
+        <select id="column_type_c2">
+          <option value="builtup">Built-Up</option>
+          <option value="box">علبة</option>
+          <option value="pipe">ماسورة</option>
+        </select>
+      </label>
+      <div id="column_c2_builtup_fields">
+        <label>bf_c2: <input type="number" id="bf_c2" required></label>
+        <label>tf_c2: <input type="number" id="tf_c2" required></label>
+        <label>tw_c2: <input type="number" id="tw_c2" required></label>
+        <label>hw_c2: <input type="number" id="hw_c2" required></label>
+      </div>
+      <div id="column_c2_box_fields" style="display: none;">
+        <label>الطول: <input type="number" id="length_c2" required></label>
+        <label>العرض: <input type="number" id="width_c2" required></label>
+        <label>السمك: <input type="number" id="thickness_c2" required></label>
+      </div>
+      <div id="column_c2_pipe_fields" style="display: none;">
+        <label>القطر الخارجي: <input type="number" id="diameter_c2" required></label>
+        <label>السمك: <input type="number" id="thickness_c2_pipe" required></label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>البيانات العامة</legend>
+      <label>الارتفاع H (م): <input type="number" id="H" required></label>
+      <label>الارتفاع الكلي H_total (م): <input type="number" id="H_total" required></label>
+      <label>السبان span (م): <input type="number" id="span" required></label>
+      <label>المسافة بين الإطارات spacing (م): <input type="number" id="spacing" required></label>
+      <label>الحمل على السقف (كجم/م²): <input type="number" id="load_area" required></label>
+      <label>fy (MPa): <input type="number" id="fy" value="355" required></label>
+      <label>معامل الأمان FS:
+        <select id="FS">
+          <option value="1.5">1.5</option>
+          <option value="2">2</option>
+        </select>
+      </label>
+      <label>نقطة تثبيت العمود:
+        <select id="K">
+          <option value="0.5">مثبت من الطرفين</option>
+          <option value="1.0">مثبت من طرف وحر من الطرف الآخر</option>
+          <option value="2.0">حر من الطرفين</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <button type="submit">تحليل</button>
+  </form>
+
+  <div id="results"></div>
+  <script src="script.js"></script>
+</body>
+</html>
